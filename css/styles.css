@@ -1,3 +1,9 @@
+main {
+  letter-spacing: 0; }
+
+.info {
+  font-size: .7rem; }
+
 .btn {
   padding: .5rem 2rem;
   border: none;
@@ -13,12 +19,13 @@ main {
   text-align: center;
   display: block;
   color: #ffeaec;
-  width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-color: #9DC3C2;
   position: relative; }
   main .heading {
     padding-top: 20%; }
+    main .heading h4 {
+      text-transform: uppercase; }
     main .heading img {
       max-width: 100%;
       margin: .2rem 0 1rem; }
@@ -31,15 +38,14 @@ main {
     background-color: #ffeaec; }
     main form input::placeholder {
       font-family: 'titillium web';
-      font-size: .7rem; }
+      font-size: .65rem;
+      letter-spacing: .5px; }
     main form input[type="text"] {
       border-top-left-radius: 2px;
       border-top-right-radius: 2px; }
     main form input[type="password"] {
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px; }
-  main .info {
-    font-size: .7rem; }
   main h5 {
     font-weight: 400;
     text-transform: uppercase;
@@ -48,6 +54,15 @@ main {
     main h5 a {
       color: #ffeaec; }
 
+footer {
+  height: 10vh;
+  background-color: #9DC3C2;
+  color: white;
+  text-align: center;
+  font-size: 1rem; }
+  footer .info {
+    padding-top: 5vh; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -55,4 +70,4 @@ main {
 body {
   font-size: 16px;
   font-family: 'titillium web';
-  letter-spacing: 1.1; }
+  letter-spacing: 1.1px; }
