@@ -19,7 +19,7 @@ main {
   text-align: center;
   display: block;
   color: #ffeaec;
-  height: 97vh;
+  height: 100vh;
   background-color: #9DC3C2;
   position: relative; }
   main .heading {
@@ -37,7 +37,7 @@ main {
     border: 1px solid #9DC3C2;
     background-color: #ffeaec; }
     main form input::placeholder {
-      font-family: 'titillium web';
+      font-family: 'Titillium Web';
       font-size: .65rem;
       letter-spacing: .5px; }
     main form input[type="text"] {
