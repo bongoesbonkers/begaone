@@ -50,7 +50,7 @@ main {
     font-weight: 400;
     text-transform: uppercase;
     color: #191a5a;
-    margin: 2rem 0 5rem; }
+    margin: 2rem 0 0; }
     main h5 a {
       color: #ffeaec; }
 
@@ -59,9 +59,8 @@ footer {
   background-color: #9DC3C2;
   color: white;
   text-align: center;
-  font-size: 1rem; }
-  footer .info {
-    padding-top: 2rem; }
+  font-size: 1rem;
+  padding-top: 15%; }
 
 * {
   margin: 0;
