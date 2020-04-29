@@ -19,7 +19,7 @@ main {
   text-align: center;
   display: block;
   color: #ffeaec;
-  height: 100vh;
+  height: 97vh;
   background-color: #9DC3C2;
   position: relative; }
   main .heading {
@@ -62,3 +62,7 @@ body {
   font-size: 16px;
   font-family: 'Titillium Web', 'sans-serif';
   letter-spacing: 1.1px; }
+
+footer {
+  text-align: center;
+  color: #333; }
