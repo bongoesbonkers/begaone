@@ -61,7 +61,8 @@ main {
 body {
   font-size: 16px;
   font-family: 'Titillium Web', 'sans-serif';
-  letter-spacing: 1.1px; }
+  letter-spacing: 1.1px;
+  background-color: #9DC3C2; }
 
 footer {
   text-align: center;
