@@ -1,0 +1,58 @@
+.btn {
+  padding: .5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; }
+  .btn__primary {
+    background-color: #191a5a;
+    color: #ffeaec; }
+  .btn__large {
+    width: 14.8rem; }
+
+main {
+  text-align: center;
+  display: block;
+  color: #ffeaec;
+  width: 100vw;
+  height: 100vh;
+  background-color: #9DC3C2;
+  position: relative; }
+  main .heading {
+    padding-top: 20%; }
+    main .heading img {
+      max-width: 100%;
+      margin: .2rem 0 1rem; }
+  main form input {
+    display: block;
+    margin: .4rem auto;
+    padding: .4rem;
+    width: 14rem;
+    border: 1px solid #9DC3C2;
+    background-color: #ffeaec; }
+    main form input::placeholder {
+      font-family: 'titillium web';
+      font-size: .7rem; }
+    main form input[type="text"] {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px; }
+    main form input[type="password"] {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px; }
+  main .info {
+    font-size: .7rem; }
+  main h5 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #191a5a;
+    margin: 2rem 0 5rem; }
+    main h5 a {
+      color: #ffeaec; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 16px;
+  font-family: 'titillium web';
+  letter-spacing: 1.1; }
