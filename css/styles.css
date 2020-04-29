@@ -19,7 +19,7 @@ main {
   text-align: center;
   display: block;
   color: #ffeaec;
-  height: 90vh;
+  height: 100vh;
   background-color: #9DC3C2;
   position: relative; }
   main .heading {
@@ -50,17 +50,9 @@ main {
     font-weight: 400;
     text-transform: uppercase;
     color: #191a5a;
-    margin: 2rem 0 0; }
+    margin: 2rem 0 4.5rem; }
     main h5 a {
       color: #ffeaec; }
-
-footer {
-  height: 10vh;
-  background-color: #9DC3C2;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-  padding-top: 10%; }
 
 * {
   margin: 0;
