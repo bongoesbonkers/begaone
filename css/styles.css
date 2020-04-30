@@ -76,6 +76,7 @@ nav {
   .feature-card--list {
     list-style-type: none;
     z-index: 1;
+    color: #000;
     font-size: .8rem;
     padding: .8rem; }
   .feature-card--details:first-of-type {
@@ -88,10 +89,9 @@ nav {
   margin: 0 0 -6rem 1rem;
   transform: rotate(90deg) translate(-3.8rem, 1rem);
   overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-width: none; }
+  scrollbar-width: thin; }
   .feature-cards::-webkit-scrollbar {
-    width: 0; }
+    width: 1px; }
 
 main {
   text-align: center;
