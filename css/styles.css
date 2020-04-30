@@ -15,12 +15,83 @@ main {
   .btn__large {
     width: 14.8rem; }
 
+nav {
+  height: 80px;
+  background-color: #4d7298;
+  position: relative; }
+  nav .nav__logoContainer {
+    display: inline-block;
+    width: 150px;
+    height: 100%;
+    position: inherit;
+    top: 25px;
+    left: 10px; }
+  nav .nav__logoImage {
+    width: 100%;
+    height: auto;
+    position: inherit; }
+  nav .nav__toggler {
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    cursor: pointer; }
+    nav .nav__togglerContainer {
+      width: 30px;
+      height: 30px;
+      background-color: #ffeaec;
+      border-radius: 5px; }
+
+.feature-card {
+  display: inline-block;
+  transform: rotate(-90deg);
+  margin: .5rem 0; }
+  .feature-card:active, .feature-card:link {
+    text-decoration: none;
+    color: #000; }
+  .feature-card--container {
+    background-color: #ffeaec;
+    width: 200px;
+    position: relative;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+  .feature-card--title {
+    color: #ffeaec;
+    font-size: 1rem;
+    position: absolute;
+    margin: 5px 0 0 10px; }
+  .feature-card--image-container {
+    height: 150px; }
+  .feature-card--image-img {
+    background-image: url("../assets/images/01.png");
+    height: inherit;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .feature-card--list {
+    list-style-type: none;
+    z-index: 1;
+    font-size: .8rem;
+    padding: .8rem; }
+  .feature-card--details:first-of-type {
+    font-weight: 700;
+    transform: translateY(-40%); }
+  .feature-card:last-of-type {
+    margin-top: 8px; }
+
+.feature-cards {
+  height: 100vw;
+  transform: rotate(90deg) translateX(-3.5rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #4d7298 transparent; }
+
 main {
   text-align: center;
   display: block;
   color: #ffeaec;
   height: 100vh;
-  background-color: #9DC3C2;
   position: relative; }
   main .heading {
     padding-top: 20%; }
@@ -53,6 +124,17 @@ main {
     margin: 2rem 0 4.5rem; }
     main h5 a {
       color: #ffeaec; }
+
+section {
+  text-align: center; }
+
+.section--heading {
+  text-align: left;
+  margin: 3rem 0 1rem 1rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #191a5a;
+  font-weight: 900; }
 
 * {
   margin: 0;
