@@ -78,10 +78,11 @@ nav {
 
 .feature-cards {
   height: 100vw;
-  transform: rotate(90deg) translate(-2.5rem, 0.8rem);
+  margin-left: 1rem;
+  transform: rotate(90deg) translate(-2.5rem, 1rem);
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-width: none; }
+  scrollbar-width: thin; }
   .feature-cards::-webkit-scrollbar {
     width: 0; }
 
