@@ -82,7 +82,8 @@ nav {
   transform: rotate(90deg) translateX(-3.5rem);
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-width: thin; }
+  scrollbar-width: none;
+  direction: rtl; }
   .feature-cards:last-child {
     margin-left: -25px; }
 
