@@ -44,7 +44,7 @@ nav {
 .feature-card {
   display: inline-block;
   transform: rotate(-90deg);
-  margin: .5rem 0; }
+  margin: .5rem 5rem; }
   .feature-card:active, .feature-card:link {
     text-decoration: none;
     color: #000; }
@@ -76,16 +76,13 @@ nav {
   .feature-card--details:first-of-type {
     font-weight: 700;
     transform: translateY(-40%); }
-  .feature-card:last-of-type {
-    margin-top: 8px; }
 
 .feature-cards {
   height: 100vw;
   transform: rotate(90deg) translateX(-3.5rem);
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #4d7298 transparent; }
+  scrollbar-width: thin; }
 
 main {
   text-align: center;
