@@ -12,8 +12,14 @@ main {
   .btn__primary {
     background-color: #191a5a;
     color: #ffeaec; }
+  .btn__secondary {
+    background-color: #4d7298;
+    color: #ffeaec;
+    text-decoration: none; }
   .btn__large {
     width: 14.8rem; }
+  .btn__medium {
+    width: 12.5rem; }
 
 nav {
   height: 80px;
@@ -74,15 +80,16 @@ nav {
     padding: .8rem; }
   .feature-card--details:first-of-type {
     font-weight: 700;
-    transform: translateY(-40%); }
+    transform: translateY(-40%);
+    letter-spacing: 0px; }
 
 .feature-cards {
   height: 100vw;
-  margin-left: 1rem;
-  transform: rotate(90deg) translate(-2.5rem, 1rem);
+  margin: 0 0 -6rem 1rem;
+  transform: rotate(90deg) translate(-3.8rem, 1rem);
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-width: thin; }
+  scrollbar-width: none; }
   .feature-cards::-webkit-scrollbar {
     width: 0; }
 
@@ -126,6 +133,9 @@ main {
 
 section {
   text-align: center; }
+  section .btn {
+    display: inline-block;
+    margin-top: 1rem; }
 
 .section--heading {
   text-align: left;
