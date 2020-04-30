@@ -4,27 +4,51 @@ main {
 .info {
   font-size: .7rem; }
 
+.heading {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
+  .heading__primary {
+    color: #191a5a; }
+  .heading__secondary {
+    color: #4d7298; }
+  .heading__tertiary {
+    color: #77a6b6; }
+  .heading__white {
+    color: #ffeaec; }
+  .heading__cta {
+    color: #e07e7e; }
+  .heading__highlight {
+    color: #e1f473; }
+
 .btn {
   padding: .5rem 2rem;
   border: none;
-  border-radius: 5px;
-  cursor: pointer; }
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
   .btn__primary {
     background-color: #191a5a;
     color: #ffeaec; }
   .btn__secondary {
-    background-color: #4d7298;
-    color: #ffeaec;
-    text-decoration: none; }
+    background-color: #77a6b6;
+    text-decoration: none;
+    color: #ffeaec; }
+  .btn__tertiary {
+    background-color: #e07e7e;
+    text-decoration: none;
+    color: #ffeaec; }
   .btn__large {
     width: 14.8rem; }
   .btn__medium {
-    width: 12.5rem; }
+    width: 70%; }
 
 nav {
   height: 80px;
   background-color: #4d7298;
-  position: relative; }
+  position: relative;
+  z-index: 10; }
   nav .nav__logoContainer {
     display: inline-block;
     width: 150px;
@@ -45,6 +69,7 @@ nav {
       width: 30px;
       height: 30px;
       background-color: #ffeaec;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
       border-radius: 5px; }
 
 .feature-card {
@@ -56,6 +81,7 @@ nav {
   .feature-card--container {
     background-color: #ffeaec;
     width: 200px;
+    height: 255px;
     position: relative;
     text-align: left;
     border-radius: 10px;
@@ -89,9 +115,10 @@ nav {
   margin: 0 0 -6rem 1rem;
   transform: rotate(90deg) translate(-3.8rem, 1rem);
   overflow-y: scroll;
-  scrollbar-width: thin; }
+  overflow-x: hidden;
+  scrollbar-width: none; }
   .feature-cards::-webkit-scrollbar {
-    width: 1px; }
+    width: 0; }
 
 main {
   text-align: center;
@@ -132,19 +159,27 @@ main {
       color: #ffeaec; }
 
 section {
-  text-align: center; }
+  text-align: center;
+  padding: 1.5rem 0; }
   section .btn {
     display: inline-block;
     margin-top: 1rem;
     text-transform: uppercase;
     letter-spacing: 0; }
 
+.section__events {
+  background-color: #ffeaec; }
+
+.section__deals {
+  background-color: #4d7298; }
+
+.section__food {
+  background-color: #9DC3C2; }
+
 .section--heading {
   text-align: left;
-  margin: 3rem 0 1rem 1.3rem;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: #191a5a;
+  margin: 0 0 2rem 1.8rem;
+  padding-top: 1rem;
   font-weight: 900; }
 
 * {
