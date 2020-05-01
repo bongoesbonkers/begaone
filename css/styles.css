@@ -174,8 +174,8 @@ nav {
   transition: opacity .2s, transform .3s;
   transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1);
   visibility: hidden;
-  position: absolute;
-  z-index: -1; }
+  position: relative;
+  z-index: -10000; }
   .navigation .nav__search-container {
     background-color: #4d7298; }
   .navigation .nav__caption {
