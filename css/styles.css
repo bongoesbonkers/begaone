@@ -163,15 +163,27 @@ nav {
       width: 120%; }
     nav .nav input[type="checkbox"]:checked ~ .navigation {
       transform: scaleY(100%);
-      z-index: 10000; }
+      opacity: 1;
+      visibility: visible;
+      z-index: 1000; }
 
 .navigation {
+  opacity: 0;
   transform: scaleY(0);
   transform-origin: top;
   transition: opacity .2s, transform .3s;
   transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1);
-  position: relative;
-  z-index: -10000; }
+  position: absolute;
+  z-index: -1000;
+  visibility: hidden;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */ }
   .navigation .nav__search-container {
     background-color: #4d7298; }
   .navigation .nav__caption {
