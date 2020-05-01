@@ -7,7 +7,7 @@ main {
 .heading {
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
   .heading__primary {
     color: #191a5a; }
   .heading__secondary {
@@ -21,13 +21,39 @@ main {
   .heading__highlight {
     color: #e1f473; }
 
+section small {
+  color: #ffeaec;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65); }
+
+.u-margin-bottom-10 {
+  margin-bottom: 10px; }
+
+.u-margin-bottom-15 {
+  margin-bottom: 15px; }
+
+.u-margin-bottom-20 {
+  margin-bottom: 20px; }
+
+.u-margin-bottom-25 {
+  margin-bottom: 25px; }
+
+.u-margin-bottom-30 {
+  margin-bottom: 30px; }
+
+.u-capitalise {
+  text-transform: capitalize; }
+
+.u-uppercase {
+  text-transform: uppercase; }
+
 .btn {
   padding: .5rem 2rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 100px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
+  letter-spacing: 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
   .btn__primary {
     background-color: #191a5a;
     color: #ffeaec; }
@@ -49,28 +75,77 @@ nav {
   background-color: #4d7298;
   position: relative;
   z-index: 10; }
-  nav .nav__logoContainer {
+  nav .nav__logo {
     display: inline-block;
     width: 150px;
     height: 100%;
     position: inherit;
     top: 25px;
     left: 10px; }
-  nav .nav__logoImage {
-    width: 100%;
-    height: auto;
-    position: inherit; }
-  nav .nav__toggler {
+    nav .nav__logo--image {
+      width: 100%;
+      height: auto;
+      position: inherit; }
+  nav .nav__label {
+    display: block;
     position: fixed;
-    top: 25px;
+    top: 20px;
     right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffeaec;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     cursor: pointer; }
-    nav .nav__togglerContainer {
-      width: 30px;
-      height: 30px;
-      background-color: #ffeaec;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-      border-radius: 5px; }
+    nav .nav__label:hover .nav__icon::before {
+      transform: translateY(-14px); }
+    nav .nav__label:hover .nav__icon::after {
+      transform: translateY(9px); }
+  nav .nav__icon {
+    display: inline-block;
+    width: 80%;
+    height: 5px;
+    background-color: #191a5a;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    nav .nav__icon::before {
+      display: block;
+      background-color: inherit;
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: translateY(-11px);
+      border-radius: inherit;
+      transition: all .2s; }
+    nav .nav__icon::after {
+      display: block;
+      background-color: inherit;
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: translateY(6px);
+      border-radius: inherit;
+      transition: transform .2s; }
+  nav .nav input[type="checkbox"] {
+    visibility: hidden; }
+    nav .nav input[type="checkbox"]:checked ~ .nav__label .nav__icon {
+      visibility: hidden;
+      width: 110%; }
+      nav .nav input[type="checkbox"]:checked ~ .nav__label .nav__icon::before {
+        opacity: 1;
+        visibility: visible;
+        background-color: #000;
+        transform: rotate(585deg);
+        transform-origin: center; }
+      nav .nav input[type="checkbox"]:checked ~ .nav__label .nav__icon::after {
+        background-color: #000;
+        visibility: visible;
+        transform: rotate(-585deg) translate(-4px, 3px); }
+    nav .nav input[type="checkbox"]:checked ~ .nav__label:hover .nav__icon, nav .nav input[type="checkbox"]:checked ~ .nav__label:active .nav__icon {
+      width: 120%; }
 
 .feature-card {
   display: inline-block;
@@ -80,13 +155,13 @@ nav {
     color: #000; }
   .feature-card--container {
     background-color: #ffeaec;
-    width: 200px;
+    width: 220px;
     height: 255px;
     position: relative;
     text-align: left;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+    box-shadow: 2px 2px 3.5px rgba(0, 0, 0, 0.5); }
   .feature-card--title {
     color: #ffeaec;
     font-size: 1rem;
@@ -112,7 +187,7 @@ nav {
 
 .feature-cards {
   height: 100vw;
-  margin: 0 0 -6rem 1rem;
+  margin: 0 0 -4rem 2rem;
   transform: rotate(90deg) translate(-3.8rem, 1rem);
   overflow-y: scroll;
   overflow-x: hidden;
@@ -155,17 +230,34 @@ main {
     text-transform: uppercase;
     color: #191a5a;
     margin: 2rem 0 4.5rem; }
-    main h5 a {
-      color: #ffeaec; }
+  main h6 {
+    font-weight: 400;
+    color: #ffeaec; }
+    main h6 a:link,
+    main h6 a:visited {
+      color: #e1f473; }
+  main a:link,
+  main a:visited {
+    color: #ffeaec; }
 
 section {
   text-align: center;
   padding: 1.5rem 0; }
+  section small {
+    text-align: left;
+    display: block;
+    margin: -2rem .7rem 3rem 1.8rem;
+    padding-right: 1rem;
+    line-height: 1.1; }
   section .btn {
     display: inline-block;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0; }
+    margin-top: 1rem; }
+
+.section--heading {
+  text-align: left;
+  margin: 0 0 2rem 1.8rem;
+  padding-top: 1rem;
+  font-weight: 900; }
 
 .section__events {
   background-color: #ffeaec; }
@@ -176,11 +268,8 @@ section {
 .section__food {
   background-color: #9DC3C2; }
 
-.section--heading {
-  text-align: left;
-  margin: 0 0 2rem 1.8rem;
-  padding-top: 1rem;
-  font-weight: 900; }
+.section__microBiz {
+  background-color: #77a6b6; }
 
 * {
   margin: 0;
@@ -191,7 +280,3 @@ body {
   font-family: 'Titillium Web', 'sans-serif';
   letter-spacing: 1.1px;
   background-color: #9DC3C2; }
-
-footer {
-  text-align: center;
-  color: #333; }
