@@ -202,10 +202,11 @@ nav {
       -moz-transform: scaleY(100%);
       transform: scaleY(100%);
       opacity: 1;
-      visibility: visible;
+/*       visibility: visible; */
       z-index: 1000; }
 
 .navigation {
+  display: block;
   opacity: 0;
   -webkit-transform: scaleY(0);
   -ms-transform: scaleY(0);
@@ -220,7 +221,7 @@ nav {
   transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1);
   position: absolute;
   z-index: -1000;
-  visibility: hidden;
+/*   visibility: hidden; */
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
