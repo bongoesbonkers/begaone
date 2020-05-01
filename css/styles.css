@@ -113,8 +113,16 @@ nav {
     cursor: pointer;
     z-index: 10000; }
     nav .nav__label:hover .nav__icon::before {
+      -webkit-transform: translateY(-14px);
+      -ms-transform: translateY(-14px);
+      -o-transform: translateY(-14px);
+      -moz-transform: translateY(-14px);
       transform: translateY(-14px); }
     nav .nav__label:hover .nav__icon::after {
+      -webkit-transform: translateY(9px);
+      -ms-transform: translateY(9px);
+      -o-transform: translateY(9px);
+      -moz-transform: translateY(9px);
       transform: translateY(9px); }
   nav .nav__icon {
     display: inline-block;
@@ -125,6 +133,10 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
     nav .nav__icon::before {
       display: block;
@@ -132,8 +144,15 @@ nav {
       content: "";
       width: 100%;
       height: 100%;
+      -webkit-transform: translateY(-11px);
+      -ms-transform: translateY(-11px);
+      -o-transform: translateY(-11px);
+      -moz-transform: translateY(-11px);
       transform: translateY(-11px);
       border-radius: inherit;
+      -webkit-transition: all .2s;
+      -ms-transition: all .2s;
+      -moz-transition: all .2s;
       transition: all .2s; }
     nav .nav__icon::after {
       display: block;
@@ -141,8 +160,15 @@ nav {
       content: "";
       width: 100%;
       height: 100%;
+      -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+      -o-transform: translateY(6px);
+      -moz-transform: translateY(6px);
       transform: translateY(6px);
       border-radius: inherit;
+      -webkit-transition: transform .2s;
+      -ms-transition: transform .2s;
+      -moz-transition: transform .2s;
       transition: transform .2s; }
   nav .nav input[type="checkbox"] {
     visibility: hidden; }
@@ -153,15 +179,27 @@ nav {
         opacity: 1;
         visibility: visible;
         background-color: #000;
+        -webkit-transform: rotate(585deg);
+        -ms-transform: rotate(585deg);
+        -o-transform: rotate(585deg);
+        -moz-transform: rotate(585deg);
         transform: rotate(585deg);
         transform-origin: center; }
       nav .nav input[type="checkbox"]:checked ~ .nav__label .nav__icon::after {
         background-color: #000;
         visibility: visible;
+        -webkit-transform: rotate(-585deg) translate(-4px, 3px);
+        -ms-transform: rotate(-585deg) translate(-4px, 3px);
+        -o-transform: rotate(-585deg) translate(-4px, 3px);
+        -moz-transform: rotate(-585deg) translate(-4px, 3px);
         transform: rotate(-585deg) translate(-4px, 3px); }
     nav .nav input[type="checkbox"]:checked ~ .nav__label:hover .nav__icon, nav .nav input[type="checkbox"]:checked ~ .nav__label:active .nav__icon {
       width: 120%; }
     nav .nav input[type="checkbox"]:checked ~ .navigation {
+      -webkit-transform: scaleY(100%);
+      -ms-transform: scaleY(100%);
+      -o-transform: scaleY(100%);
+      -moz-transform: scaleY(100%);
       transform: scaleY(100%);
       opacity: 1;
       visibility: visible;
@@ -169,8 +207,15 @@ nav {
 
 .navigation {
   opacity: 0;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -o-transform: scaleY(0);
   transform: scaleY(0);
   transform-origin: top;
+  -webkit-transition: opacity .2s, transform .3s;
+  -ms-transition: opacity .2s, transform .3s;
+  -moz-transition: opacity .2s, transform .3s;
   transition: opacity .2s, transform .3s;
   transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1);
   position: absolute;
@@ -218,6 +263,10 @@ nav {
     width: 48px;
     height: 48px;
     background-color: #ffeaec;
+    -webkit-transform: translate(-1rem, 19px);
+    -ms-transform: translate(-1rem, 19px);
+    -moz-transform: translate(-1rem, 19px);
+    -o-transform: translate(-1rem, 19px);
     transform: translate(-1rem, 19px);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px; }
@@ -225,6 +274,10 @@ nav {
       width: 100%;
       height: 100%;
       position: relative;
+      -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+      -moz-transform: translateX(5px);
+      -o-transform: translateX(5px);
       transform: translateX(5px); }
     .navigation .nav__search-icon-1 {
       padding: .2rem;
@@ -256,6 +309,10 @@ nav {
       width: 23px;
       height: 3px;
       border-radius: 100px;
+      -webkit-transform: translate(15px, 29px) rotate(45deg);
+      -ms-transform: translate(15px, 29px) rotate(45deg);
+      -moz-transform: translate(15px, 29px) rotate(45deg);
+      -o-transform: translate(15px, 29px) rotate(45deg);
       transform: translate(15px, 29px) rotate(45deg); }
     .navigation .nav__search-button {
       padding: .7rem 1rem;
@@ -308,6 +365,10 @@ nav {
 
 .feature-card {
   display: inline-block;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   transform: rotate(-90deg); }
   .feature-card:active, .feature-card:link {
     text-decoration: none;
@@ -341,12 +402,20 @@ nav {
     padding: .8rem; }
   .feature-card--details:first-of-type {
     font-weight: 700;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
     transform: translateY(-40%);
     letter-spacing: 0px; }
 
 .feature-cards {
   height: 100vw;
   margin: 0 0 -4rem 2rem;
+  -webkit-transform: rotate(90deg) translate(-3.8rem, 1rem);
+  -ms-transform: rotate(90deg) translate(-3.8rem, 1rem);
+  -o-transform: rotate(90deg) translate(-3.8rem, 1rem);
+  -moz-transform: rotate(90deg) translate(-3.8rem, 1rem);
   transform: rotate(90deg) translate(-3.8rem, 1rem);
   overflow-y: scroll;
   overflow-x: hidden;
