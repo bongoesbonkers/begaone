@@ -162,15 +162,20 @@ nav {
     nav .nav input[type="checkbox"]:checked ~ .nav__label:hover .nav__icon, nav .nav input[type="checkbox"]:checked ~ .nav__label:active .nav__icon {
       width: 120%; }
     nav .nav input[type="checkbox"]:checked ~ .navigation {
+      visibility: visible;
       transform: scaleY(100%);
-      opacity: 1; }
+      opacity: 1;
+      z-index: 10000; }
 
 .navigation {
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top;
   transition: opacity .2s, transform .3s;
-  transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1); }
+  transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1);
+  visibility: hidden;
+  position: absolute;
+  z-index: -1; }
   .navigation .nav__search-container {
     background-color: #4d7298; }
   .navigation .nav__caption {
