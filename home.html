@@ -12,29 +12,31 @@
 
 <body>
   <nav>
-    <div class="nav__logo">
-      <img src="assets/images/begaone__header-icon.png" alt="begaone-logo" class="nav__logo--image">
-    </div>
+    <div class="nav__container">
 
-    <div class="nav">
-      <input type="checkbox" id="nav__toggler">
+      <div class="nav__logo">
+        <img src="assets/images/begaone__header-icon.png" alt="begaone-logo" class="nav__logo--image">
+      </div>
+
+      <input type="checkbox" id="nav__toggler" class="nav__toggler">
       <label for="nav__toggler" class="nav__label">
         <span class="nav__icon"></span>
       </label>
 
       <!-- NAVIGATION WINDOW START-->
-      <div class="navigation">
+      <div class="nav__window">
 
-        <div class="nav__search-container">
-          <p class="nav__caption">Hello <span class="nav__caption-username highlight">Leslie</span>, what are you looking for today?</p>
-          <form id="site-search" action="" role="search">
-            <input type="text" class="nav__search-input" placeholder="search for a food, business, product, etc.">
-            <div class="nav__search">
+        <div class="nav__search">
+          <p class="nav__search-caption u-margin-bottom-10">Hello <span class="nav__caption-username highlight">Leslie</span>, what are you looking for today?</p>
+          <form id="site-search" class="nav__search-form" action="" role="search">
+            <input type="text" class="nav__search-input" placeholder="search for amazing things...">
+            <div class="nav__search-icon">
               <div class="nav__search-icon-container">
                 <span class="nav__search-icon-1"></span>
                 <span class="nav__search-icon-2"></span>
               </div>
             </div>
+
             <input type="submit" role="search" value="SEARCH" class="btn btn__xlarge btn__primary nav__search-button u-margin-bottom-20">
           </form>
         </div>
@@ -83,370 +85,373 @@
         </div>
 
       </div>
-
       <!-- NAVIGATION WINDOW END -->
 
     </div>
+
   </nav>
 
-  <section class="section__events">
-    <h2 class="heading section--heading heading__white">Events</h2>
-    <small class="u-capitalise">For the social birds out there, host events and invite your friends and family!</small></small>
+  <div class="sections__container">
+    <section class="section__events">
+      <h2 class="heading section--heading heading__white">Events</h2>
+      <small class="u-capitalise">For the social birds out there, host events and invite your friends and family!</small></small>
 
-    <div class="feature-cards">
+      <div class="feature-cards">
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">0</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">0</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">1</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">1</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
-
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">2</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">2</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">3</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">3</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">4</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">4</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
-          </ul>
-        </div>
-      </a>
+        </a>
 
-    </div>
+      </div>
 
-    <a href="" class="btn btn__tertiary btn__medium u-capitalise">All Events</a>
-  </section>
+      <a href="" class="btn btn__tertiary btn__medium u-capitalise">All Events</a>
+    </section>
 
-  <section class="section__deals">
-    <h2 class="heading section--heading heading__white">Featured Deals</h2>
-    <small class="u-capitalise">Grab a bargain with these deals. Check this section out frequently for exclusive deals!</small>
+    <section class="section__deals">
+      <h2 class="heading section--heading heading__white">Featured Deals</h2>
+      <small class="u-capitalise">Grab a bargain with these deals. Check this section out frequently for exclusive deals!</small>
 
-    <div class="feature-cards">
+      <div class="feature-cards">
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">0</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">0</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">1</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">1</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
-
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">2</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">2</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">3</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">3</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">4</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">4</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
 
-    </div>
+      </div>
 
 
-    <a href="" class="btn btn__tertiary btn__medium u-capitalise">more spicy deals here</a>
-  </section>
+      <a href="" class="btn btn__tertiary btn__medium u-capitalise">more spicy deals here</a>
+    </section>
 
-  <!-- TRENDING FOODS  ----------------------->
+    <!-- TRENDING FOODS  ----------------------->
 
-  <section class="section__food">
-    <h2 class="heading section--heading heading__white">Trending Foods</h2>
-    <small class="u-capitalise">notable businesses, instagram businesses & the like</small>
+    <section class="section__food">
+      <h2 class="heading section--heading heading__white">Trending Foods</h2>
+      <small class="u-capitalise">notable businesses, instagram businesses & the like</small>
 
-    <div class="feature-cards">
+      <div class="feature-cards">
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">0</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">0</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">1</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">1</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
-
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">2</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">2</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">3</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">3</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">4</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">4</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
 
-    <a href="" class="btn btn__tertiary btn__medium u-capitalise">Salivating yet? More here!</a>
-  </section>
+      <a href="" class="btn btn__tertiary btn__medium u-capitalise">Salivating yet? More here!</a>
+    </section>
 
-  <!-- Rising Micro Businesses -->
+    <!-- Rising Micro Businesses -->
 
-  <!-- TRENDING FOODS  ----------------------->
+    <!-- TRENDING FOODS  ----------------------->
 
-  <section class="section__microBiz">
-    <h2 class="heading section--heading heading__white">Rising Stars</h2>
-    <small class="u-capitalise">SMEs & Social Media Businesses from each industry with the top positive reviews get featured here. As their customers, you get to support and decide who is best! </small>
+    <section class="section__microBiz">
+      <h2 class="heading section--heading heading__white">Rising Stars</h2>
+      <small class="u-capitalise">SMEs & Social Media Businesses from each industry with the top positive reviews get featured here. As their customers, you get to support and decide who is best! </small>
 
-    <div class="feature-cards">
+      <div class="feature-cards">
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">0</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">0</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
+
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">1</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <li class="feature-card--details">Date: 30/04/2020</li>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">1</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <li class="feature-card--details">Date: 30/04/2020</li>
+        </a>
 
-          </ul>
-        </div>
-      </a>
-
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">2</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">2</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">3</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">3</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
+        </a>
 
-      <a href="#" class="feature-card">
-        <div class="feature-card--container">
-          <p class="feature-card--title">4</p>
-          <div class="feature-card--image-container">
-            <div class="feature-card--image-img"></div>
+        <a href="#" class="feature-card">
+          <div class="feature-card--container">
+            <p class="feature-card--title">4</p>
+            <div class="feature-card--image-container">
+              <div class="feature-card--image-img"></div>
+            </div>
+            <ul class="feature-card--list">
+              <li class="feature-card--details">Venue: Kpg.Jerudong</li>
+              <li class="feature-card--details">Open To: Public</li>
+              <li class="feature-card--details">Time: 1500</li>
+              <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
+            </ul>
           </div>
-          <ul class="feature-card--list">
-            <li class="feature-card--details">Venue: Kpg.Jerudong</li>
-            <li class="feature-card--details">Open To: Public</li>
-            <li class="feature-card--details">Time: 1500</li>
-            <!-- <li class="feature-card--details">Date: 30/04/2020</li> -->
-          </ul>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
 
-    <a href="" class="btn btn__tertiary btn__medium u-capitalise">Salivating yet? More here!</a>
-  </section>
+      <a href="" class="btn btn__tertiary btn__medium u-capitalise">Salivating yet? More here!</a>
+    </section>
+  </div>
+
 
   <script src="scripts/scroller.js"></script>
 
