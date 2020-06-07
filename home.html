@@ -18,7 +18,7 @@
         <img src="assets/images/begaone__header-icon.png" alt="begaone-logo" class="nav__logo--image">
       </div>
 
-      <input type="checkbox" id="nav__toggler" class="nav__toggler">
+      <input type="checkbox" id="nav__toggler" class="nav__toggler" autocomplete="off">
       <label for="nav__toggler" class="nav__label">
         <span class="nav__icon"></span>
       </label>
@@ -27,7 +27,24 @@
       <div class="nav__window">
 
         <div class="nav__search">
-          <p class="nav__search-caption u-margin-bottom-10">Hello <span class="nav__caption-username highlight">Leslie</span>, what are you looking for today?</p>
+          <p class="nav__search-caption u-margin-bottom-10"></p>
+
+          <!-- REGISTRATION FORM-->
+          <div class="register__container">
+
+            <input type="checkbox" name="register" id="register" class="register__toggler">
+            <form class="register__form">
+              <h2 class="u-margin-bottom-30 u-uppercase">register for free</h2>
+              <label for="register" class="register__form-closer">X</label>
+              <label for="register__email">Email Address</label>
+              <input type="text" id="registerEmail">
+              <label for="register__password">Password</label>
+              <input type="password" id="registerPassword" class="u-margin-bottom-20">
+              <input type="submit" value="Register" class="btn btn__large btn__secondary">
+            </form>
+          </div>
+
+          <!-- SEARCH FORM -->
           <form id="site-search" class="nav__search-form" action="" role="search">
             <input type="text" class="nav__search-input" placeholder="search for amazing things...">
             <div class="nav__search-icon">
@@ -82,17 +99,32 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> <!-- NAV HERO END -->
 
+      <!-- NAVIGATION EASY LINKS -->
+
+      <div class="nav__easy-container">
+        <h2 class="heading heading__primary">Public listings</h2>
+        <hr>
+        <ul class="nav__easy-links">
+          <li class="nav__easy-link">Pets & Animals</li>
+          <li class="nav__easy-link">Cubes</li>
+          <li class="nav__easy-link">Motor Vehicles</li>
+          <li class="nav__easy-link">Homes</li>
+        </ul>
+        <hr>
+        <input type="button" value="Sign Out" class="btn btn-white" id="signOut">
+      </div>
       </div>
       <!-- NAVIGATION WINDOW END -->
-
     </div>
 
   </nav>
 
+  <!-- NAVIGATION END -->
+
   <div class="sections__container">
-    <section class="section__events">
+    <section class="section__events u-bg-1">
       <h2 class="heading section--heading heading__white">Events</h2>
       <small class="u-capitalise">For the social birds out there, host events and invite your friends and family!</small></small>
 
@@ -180,7 +212,7 @@
       <a href="" class="btn btn__tertiary btn__medium u-capitalise">All Events</a>
     </section>
 
-    <section class="section__deals">
+    <section class="section__deals u-bg-2">
       <h2 class="heading section--heading heading__white">Featured Deals</h2>
       <small class="u-capitalise">Grab a bargain with these deals. Check this section out frequently for exclusive deals!</small>
 
@@ -272,7 +304,7 @@
 
     <!-- TRENDING FOODS  ----------------------->
 
-    <section class="section__food">
+    <section class="section__food u-bg-3">
       <h2 class="heading section--heading heading__white">Trending Foods</h2>
       <small class="u-capitalise">notable businesses, instagram businesses & the like</small>
 
@@ -363,7 +395,7 @@
 
     <!-- TRENDING FOODS  ----------------------->
 
-    <section class="section__microBiz">
+    <section class="section__microBiz u-bg-4">
       <h2 class="heading section--heading heading__white">Rising Stars</h2>
       <small class="u-capitalise">SMEs & Social Media Businesses from each industry with the top positive reviews get featured here. As their customers, you get to support and decide who is best! </small>
 
@@ -452,11 +484,22 @@
     </section>
   </div>
 
+  <!-------------------------------------------- SCRIPTS ----------------------------------------------------->
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+  <script src="scripts/firebase.js"></script>
 
+  <!-- ESSENTIALS -->
+  <!-- UI -->
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/nav_ui.js"></script>
+  <script src="scripts/index_ui.js"></script>
   <script src="scripts/scroller.js"></script>
+  <script src="scripts/app.js"></script>
 
-  <!-- DEVELOPMENT SCRIPTS (REMOVE POST DEV) -->
-  <!-- <script src="scripts/scroller.js"></script> -->
+
 
 </body>
 

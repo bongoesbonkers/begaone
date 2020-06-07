@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width", initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap" rel="stylesheet">
@@ -11,30 +11,69 @@
 </head>
 
 <body>
-  <main>
-    <div class="container">
+  <div class="landing u-bg-1">
+    <div class="container u-bg-1">
       <div class="heading">
         <h4>Welcome</h4>
         <img src="assets/images/logo__main.png" alt="" class="">
       </div>
-      <div class="formcontainer">
 
-        <form action="">
-          <div class="login">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
+      <!-- Register result box -->
+      <div class="register__result-container">
+        <p class="highlight--success u-hidden">Success! Please login with your registered e-mail</p>
+      </div>
+      
+      <div class="formcontainer">
+        <form class="login__form">
+          <!-- <div class="login"> -->
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
             <button type="submit" class="btn btn__primary btn__large">Login</button>
-          </div>
+          <!-- </div> -->
         </form>
       </div>
 
       <p class="info">An account is required to use this application</p>
-      <h5>no account? <a href="home.html"><span class="hightlight">register</span></a> here</h5>
-      <h6 class="u-capitalise">click <a href="https://bongoesbonkers.github.io/begaone/home.html"><span class="hightlight">here</span></a> to browse the home page.</h6>
+
+      <!-- REGISTRATION FORM -->
+      <div class="register__container">
+        
+        <input type="checkbox" name="register" id="register" class="register__toggler" autocomplete="off">
+        <form class="register__form">
+          <h2 class="u-margin-bottom-30 u-uppercase">register for free</h2>
+          <label for="register" class="register__form-closer">X</label>
+          <label for="register__email">Email Address</label>
+          <input type="email" id="registerEmail" autocomplete="off">
+          <label for="register__password">Password</label>
+          <input type="password" id="registerPassword" class="u-margin-bottom-20">
+          <input type="submit" value="Register" class="btn btn__large btn__secondary">
+        </form>
+      </div>
+
+      <h5>no account? <label for="register" class="highlight--cta">register as a free user</label></h5>
+      
+      <!-- Homepage Link -->
+      <!-- <h6 class="u-capitalise">click <a href="https://bongoesbonkers.github.io/begaone/home.html"></a><span class="hightlight">here</span></a> to browse the home page.</h6> -->
+
+
+
+
+      <!-- Copyright -->
       <p class="info">A webapp by bongoesbonkers. All rights reserved.</p>
 
     </div>
+  </div>
+    
 
-  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+  <script src="scripts/firebase.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/nav_ui.js"></script>
+  <script src="scripts/index_ui.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
+
