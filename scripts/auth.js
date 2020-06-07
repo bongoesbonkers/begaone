@@ -51,7 +51,7 @@ class Authenticator {
                         .then(document => {
                             if(document.exists) {
                                 const user = document.data();
-                                window.location.href = "home.html";
+                                window.location.href = "/home.html";
                             } else {
                                 //create new user document
                                 db.collection("users").doc(response.user.uid).set({
@@ -59,7 +59,7 @@ class Authenticator {
                                 })
                                 .then(()=>{
                                     //redirect to homepage after sign-in
-                                    window.location.href = "home.html";
+                                    window.location.href = "/home.html";
                                 })
                             }
                         })                        
@@ -81,7 +81,7 @@ class Authenticator {
                     console.log('user signed out');
 
                     //redirect user back to index
-                    window.location.href = "index.html";
+                    window.location.href = "/index.html";
                 })
                 .catch(err => console.log(err))
             })
@@ -91,14 +91,15 @@ class Authenticator {
     authChanges() {
         auth.onAuthStateChanged(user => {
             if(user){
-                console.log(`user is logged in`);
-                if(window.location.pathname == "/begaone/"){
+                // redirect user to home page if he is still logged in
+                if(window.location.pathname == "/") {
                     const redirectToggler = document.querySelector('#redirectToggler');
                     redirectToggler.checked = true;
                     let timer = setTimeout(()=>{
-                    window.location.href = "home.html";   
+                        window.location.href = "/home.html";
                     }, 1200)
                 }
+                console.log(`user is logged in`);
                 navUI.setCaption(user);
             } else {
                 console.log(`no user is logged in`);

@@ -6,9 +6,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
     featureCards.forEach( collection => {
         collection.style.overflowY = "hidden";
         collection.style.overflowY = "scroll";
-        let timer = setTimeout(()=> {
-            collection.scrollTop = collection.scrollHeight;
-        }, 1300);
+        collection.scrollTop = collection.scrollHeight;
+
+        // let timer = setTimeout(()=> {
+        //     collection.scrollTop = collection.scrollHeight;
+        // }, 1300);
     });
 
     let userMedals = document.querySelector('.profile__content-medals');
