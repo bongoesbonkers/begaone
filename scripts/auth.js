@@ -93,7 +93,11 @@ class Authenticator {
             if(user){
                 console.log(`user is logged in`);
                 if(window.location.pathname == "/begaone/"){
+                    const redirectToggler = document.querySelector('#redirectToggler');
+                    redirectToggler.checked = true;
+                    let timer = setTimeout(()=>{
                     window.location.href = "home.html";   
+                    }, 1200)
                 }
                 navUI.setCaption(user);
             } else {
