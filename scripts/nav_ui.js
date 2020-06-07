@@ -11,7 +11,7 @@ class NavUI {
             else if(user.displayName != null) {
                 navCaption.innerHTML = `Hello <span class="nav__caption-username highlight--info">${user.displayName}</span>, what are you looking for today?`
             } else {
-                navCaption.innerHTML = `Welcome! It appears that you have not set up your username. <a href='/user_profile.html'><span class="highlight--cta">Click here to update your profile</span></a>.`;
+                navCaption.innerHTML = `Welcome! It appears that you have not set up your username. <a href='bongoesbonkers.github.io/user_profile.html'><span class="highlight--cta">Click here to update your profile</span></a>.`;
             }
         }
     }
