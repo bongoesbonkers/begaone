@@ -562,10 +562,10 @@ nav {
   transform: translate(-50%, -50%); }
 
 #medal--1 {
-  background-image: url('../assets/icons/medal_sml.png'); }
+  background-image: url(/assets/icons/medal_sml.png); }
 
 #medal--2 {
-  background-image: url('../assets/icons/medal_lg.png'); }
+  background-image: url(/assets/icons/medal_lg.png); }
 
 .container {
   margin: 0 auto;
@@ -589,7 +589,8 @@ nav {
 
 .landing {
   height: 100vh;
-  color: #ffeaec; }
+  color: #ffeaec;
+  position: relative; }
   .landing .heading {
     padding-top: 20%; }
     .landing .heading h4 {
@@ -617,6 +618,30 @@ nav {
   .landing a:link,
   .landing a:visited {
     color: #ffeaec; }
+  .landing input[type="checkbox"] {
+    display: none; }
+    .landing input[type="checkbox"]:checked ~ .redirect__container {
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(25, 26, 90, 0.97);
+      height: 100vh;
+      width: 100vw; }
+  .landing .redirect__container {
+    opacity: 0; }
+    .landing .redirect__container h4 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      text-transform: capitalize;
+      width: inherit; }
 
 section {
   text-align: center;
@@ -652,7 +677,7 @@ section {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url('../assets/images/profile_test.jpg'); }
+  background-image: url(/assets/images/profile_test.jpg); }
 
 .profile__head-content {
   letter-spacing: 0;
