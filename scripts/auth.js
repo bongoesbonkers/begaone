@@ -93,7 +93,7 @@ class Authenticator {
             if(user){
                 console.log(`user is logged in`);
                 if(window.location.pathname === "/"){
-                    window.location.href = "/home.html";   
+                    window.location.href = "../home.html";   
                 }
                 navUI.setCaption(user);
             } else {
