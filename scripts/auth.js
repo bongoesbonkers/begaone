@@ -92,7 +92,7 @@ class Authenticator {
         auth.onAuthStateChanged(user => {
             if(user){
                 console.log(`user is logged in`);
-                if(window.location.pathname == "/"){
+                if(window.location.pathname == "/begaone/"){
                     window.location.href = "home.html";   
                 }
                 navUI.setCaption(user);
