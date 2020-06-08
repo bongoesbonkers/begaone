@@ -275,7 +275,9 @@ nav {
     -moz-transform: scaleY(1);
     transform: scaleY(1);
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    display: block;
+}
   .nav__toggler:checked .section__container {
     z-index: 0; }
 
@@ -294,6 +296,7 @@ nav {
   transition: opacity 0.2s, transform 0.3s;
   transition-timing-function: cubic-bezier(0.2, 0.37, 0, 1);
   visibility: hidden;
+  display: none;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
