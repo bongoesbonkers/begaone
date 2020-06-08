@@ -1,30 +1,17 @@
-.profile__content-medal {
-  margin: 0 auto;
-  width: 100px;
-  height: 90px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: translateX(10px) rotate(-90deg);
-  position: relative; }
-
-.profile__content-rotated {
+.feature-cards, .profile__content-medals {
   height: inherit;
-  overflow: scroll;
+  width: inherit;
   margin: 0;
   list-style-type: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  -webkit-transform: translate(-50%, -50%) rotate(90deg);
-  -ms-transform: translate(-50%, -50%) rotate(90deg);
-  -o-transform: translate(-50%, -50%) rotate(90deg);
-  -moz-transform: translate(-50%, -50%) rotate(90deg);
-  height: 95vw;
-  width: 110px;
+  overflow-x: hidden;
   overflow-y: scroll;
-  scrollbar-width: auto; }
+  scrollbar-width: auto;
+  scroll-behavior: smooth; }
+  .feature-cards::-webkit-scrollbar, .profile__content-medals::-webkit-scrollbar {
+    width: 0; }
 
 body {
   font-size: 16px;
@@ -60,20 +47,15 @@ body {
   .heading__cta {
     color: #e07e7e; }
 
-section small {
-  color: #ffeaec;
-  text-shadow: 1px 1px 2px rgba(22, 22, 22, 0.65);
+.section__info {
   text-align: left;
-  display: block;
-  margin: -2rem .7rem 3rem 1.8rem;
-  padding-right: 1rem;
-  line-height: 1.1; }
+  padding: 1rem 1.5rem;
+  margin-bottom: -3rem; }
 
-.section--heading {
-  text-align: left;
-  margin: 0 0 2rem 1.8rem;
-  padding-top: 1rem;
-  font-weight: 900; }
+.section__small {
+  display: block;
+  line-height: 1;
+  color: white; }
 
 .u-bg-1 {
   background-color: #9DC3C2; }
@@ -258,7 +240,8 @@ nav {
     transition: transform 0.2s; }
 
 .nav__toggler {
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
   .nav__toggler:checked ~ .nav__label .nav__icon {
     visibility: hidden;
     width: 110%; }
@@ -282,7 +265,7 @@ nav {
       transform: rotate(-585deg) translate(-4px, 3px); }
   .nav__toggler:checked ~ .nav__label:active .nav__icon, .nav__toggler:checked ~ .nav__label:hover .nav__icon {
     width: 120%; }
-  .nav__toggler:checked ~ .nav__window {
+  .nav__toggler:checked ~ nav .nav__window {
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     -o-transform: scaleY(1);
@@ -489,10 +472,8 @@ nav {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
-  .feature-card:active, .feature-card:link {
-    text-decoration: none;
-    color: #161616; }
+  transform: rotate(-90deg);
+  text-decoration: none; }
   .feature-card--container {
     background-color: #ffeaec;
     width: 220px;
@@ -562,30 +543,28 @@ nav {
   transform: translate(-50%, -50%); }
 
 #medal--1 {
-  background-image: url("../assets/icons/medal_sml.png"); }
+  background-image: url(/assets/icons/medal_sml.png); }
 
 #medal--2 {
-  background-image: url("../assets/icons/medal_lg.png"); }
+  background-image: url(/assets/icons/medal_lg.png); }
 
 .container {
   margin: 0 auto;
   text-align: center;
   display: block; }
 
-.feature-cards {
+.feature-cards--container {
+  transform: rotate(90deg);
   height: 100vw;
-  margin: 0 0 -4rem 2rem;
-  -webkit-transform: rotate(90deg) translate(-3.8rem, 1rem);
-  -ms-transform: rotate(90deg) translate(-3.8rem, 1rem);
-  -o-transform: rotate(90deg) translate(-3.8rem, 1rem);
-  -moz-transform: rotate(90deg) translate(-3.8rem, 1rem);
-  transform: rotate(90deg) translate(-3.8rem, 1rem);
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scrollbar-width: none; }
-  .feature-cards::-webkit-scrollbar {
-    width: 0; }
+  width: auto; }
+
+.feature-cards {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  width: 300px; }
 
 .landing {
   height: 100vh;
@@ -643,15 +622,15 @@ nav {
       text-transform: capitalize;
       width: inherit; }
 
-section {
-  text-align: center;
-  padding: 1.5rem 0; }
-  section .btn {
-    display: inline-block;
-    margin-top: 1rem; }
-
-.sections__container {
+.sections__container:first-of-type {
   padding-top: 80px; }
+
+.sections__container .btn {
+  display: inline-block;
+  margin: -2rem auto 2rem; }
+
+section {
+  text-align: center; }
 
 .profile__container {
   padding-top: 80px;
@@ -677,7 +656,7 @@ section {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url("../assets/images/profile_test.jpg"); }
+  background-image: url(/assets/images/profile_test.jpg); }
 
 .profile__head-content {
   letter-spacing: 0;
@@ -755,19 +734,40 @@ section {
       width: 100vw;
       height: 150px;
       position: relative; }
-  .profile__content-medal span {
-    text-transform: capitalize;
-    font-size: 0.7rem;
-    font-weight: 700;
-    line-height: 0.7rem;
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    max-height: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -290%); }
+  .profile__content-medals--container {
+    width: inherit;
+    height: inherit; }
+  .profile__content-medals {
+    transform: translate(-50%, -50%) rotate(90deg);
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    -ms-transform: translate(-50%, -50%) rotate(90deg);
+    -o-transform: translate(-50%, -50%) rotate(90deg);
+    -moz-transform: translate(-50%, -50%) rotate(90deg);
+    height: 100vw;
+    width: 150px; }
+  .profile__content-medal {
+    margin: 0 auto;
+    width: 100px;
+    height: 90px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(10px) rotate(-90deg);
+    position: relative;
+    width: 110px; }
+    .profile__content-medal span {
+      text-transform: capitalize;
+      font-size: 0.7rem;
+      font-weight: 700;
+      line-height: 0.7rem;
+      position: absolute;
+      text-align: center;
+      display: inline-block;
+      max-height: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -290%); }
 
 .profile__content-bio {
   list-style-type: none;
