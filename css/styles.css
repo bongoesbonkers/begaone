@@ -582,6 +582,7 @@ nav {
   transform: rotate(90deg) translate(-3.8rem, 1rem);
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   scrollbar-width: none; }
   .feature-cards::-webkit-scrollbar {
     width: 0; }
