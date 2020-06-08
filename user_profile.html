@@ -13,7 +13,10 @@
 <body class="u-bg-material">
 
     <!-- NAVIGATION -->
-
+    <input type="checkbox" id="nav__toggler" class="nav__toggler" autocomplete="off">
+    <label for="nav__toggler" class="nav__label">
+        <span class="nav__icon"></span>
+    </label>
     <nav>
         <div class="nav__container">
 
@@ -21,10 +24,7 @@
                 <img src="assets/images/begaone__header-icon.png" alt="begaone-logo" class="nav__logo--image">
             </div>
 
-            <input type="checkbox" id="nav__toggler" class="nav__toggler" autocomplete="off">
-            <label for="nav__toggler" class="nav__label">
-                <span class="nav__icon"></span>
-            </label>
+            
 
             <!-- NAVIGATION WINDOW START-->
             <div class="nav__window">
@@ -164,7 +164,7 @@
         <a href="mailto: thisusersmail@mail.com?
             subject = begaoneMail
             &body= Hi! I found you from begaone.com" class="profile__head-email">
-            <img src="assets/icons/mailing_sml.png" alt="">
+            <img src="/assets/icons/mailing_sml.png" alt="">
         </a>
     </div>
 
@@ -174,14 +174,16 @@
             <!-- User Medals & Achievements -->
             <h4 class="u-margin-bottom-10">My Medals</h4>
             <div class="profile__content-box">
-                <ul class="profile__content-medals profile__content-rotated">
-                    <li class="profile__content-medal" id="medal--1"><span>Review Champ</span></li>
-                    <li class="profile__content-medal" id="medal--1"><span>Chatter bot</span></li>
-                    <li class="profile__content-medal" id="medal--2"><span>Registered User</span></li>
-                    <li class="profile__content-medal" id="medal--1"><span>Review Champ</span></li>
-                    <li class="profile__content-medal" id="medal--2"><span>Review Champ</span></li>
-                    <li class="profile__content-medal" id="medal--2"><span>Review Champ</span></li>
-                </ul>
+                <div class="profile__content-medals--container">
+                    <ul class="profile__content-medals">
+                        <li class="profile__content-medal" id="medal--1"><span>Review Champ</span></li>
+                        <li class="profile__content-medal" id="medal--1"><span>Chatter bot</span></li>
+                        <li class="profile__content-medal" id="medal--2"><span>Registered User</span></li>
+                        <li class="profile__content-medal" id="medal--1"><span>Review Champ</span></li>
+                        <li class="profile__content-medal" id="medal--2"><span>Review Champ</span></li>
+                        <li class="profile__content-medal" id="medal--2"><span>Review Champ</span></li>
+                    </ul>
+                </div>
             </div>
 
 
@@ -207,7 +209,7 @@
                     <li class="profile__content-bio-key">personal website</li>
                     <a href="#" class="profile__content-bio-value">www.margegraphicdesigner.com</a>
 
-                    <a href="#" class="profile__content-edit-bio"><img src="assets/icons/edit.png" alt="Edit Bio">Edit bio</a>
+                    <a href="#" class="profile__content-edit-bio"><img src="/assets/icons/edit.png" alt="Edit Bio">Edit bio</a>
                 </ul>
 
             </div>
