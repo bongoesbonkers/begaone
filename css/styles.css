@@ -543,10 +543,10 @@ nav {
   transform: translate(-50%, -50%); }
 
 #medal--1 {
-  background-image: url(/assets/icons/medal_sml.png); }
+  background-image: url("../assets/icons/medal_sml.png"); }
 
 #medal--2 {
-  background-image: url(/assets/icons/medal_lg.png); }
+  background-image: url("../assets/icons/medal_lg.png"); }
 
 .container {
   margin: 0 auto;
@@ -656,7 +656,7 @@ section {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url(/assets/images/profile_test.jpg); }
+  background-image: url("../assets/images/profile_test.jpg"); }
 
 .profile__head-content {
   letter-spacing: 0;
