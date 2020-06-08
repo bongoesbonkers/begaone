@@ -276,8 +276,7 @@ nav {
     transform: scaleY(1);
     opacity: 1;
     visibility: visible;
-    display: block;
-}
+    display: block; }
   .nav__toggler:checked .section__container {
     z-index: 0; }
 
@@ -551,10 +550,36 @@ nav {
   transform: translate(-50%, -50%); }
 
 #medal--1 {
-  background-image: url("../assets/icons/medal_sml.png"); }
+  background-image: url(/assets/icons/medal_sml.png); }
 
 #medal--2 {
-  background-image: url("../assets/icons/medal_lg.png"); }
+  background-image: url(/assets/icons/medal_lg.png); }
+
+.slider__container {
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 150px;
+  width: 300px;
+  box-sizing: border-box;
+  position: relative; }
+
+.slider__contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  height: 300px;
+  width: 150px;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.slider__content {
+  list-style-type: none;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+  transform: rotate(-90deg);
+  margin: 6rem auto; }
 
 .container {
   margin: 0 auto;
@@ -666,7 +691,7 @@ section {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url("../assets/images/profile_test.jpg"); }
+  background-image: url(/assets/images/profile_test.jpg); }
 
 .profile__head-content {
   letter-spacing: 0;
