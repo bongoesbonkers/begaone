@@ -262,6 +262,10 @@ nav {
     opacity: 1;
     visibility: visible;
     display: block; }
+  .nav__toggler:checked ~ .sections__container .feature__cards-container {
+    z-index: 0; }
+  .nav__toggler:not(:checked) ~ .sections__container .feature__cards-container {
+    z-index: 1; }
 
 .nav__window {
   width: 100vw;
@@ -537,12 +541,8 @@ nav {
 
 .slider__container {
   margin: 0 auto;
-  border: 1px solid black;
   box-sizing: border-box;
-  position: relative;
-  scroll-behavior: smooth; }
-  .slider__container::-webkit-scrollbar {
-    width: auto; }
+  position: relative; }
 
 .slider__contents {
   position: absolute;
@@ -550,7 +550,11 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
   overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: 0; }
+  .slider__contents::-webkit-scrollbar {
+    display: none; }
 
 .slider__content {
   list-style-type: none;
@@ -630,12 +634,13 @@ section {
   text-align: center; }
 
 .feature__cards-container {
-  height: 400px; }
+  height: 350px;
+  margin: 1rem 0;
+  z-index: 1; }
 
 .feature__cards {
   height: 100vw;
-  width: 400px;
-  z-index: 0; }
+  width: 400px; }
 
 .profile__container {
   padding-top: 80px;
@@ -722,7 +727,7 @@ section {
 .profile__head-email {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: 0;
   cursor: pointer; }
   .profile__head-email img {
     width: 70%; }
@@ -743,23 +748,17 @@ section {
     width: inherit;
     height: inherit; }
   .profile__content-medals {
-    transform: translate(-50%, -50%) rotate(90deg);
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-    -ms-transform: translate(-50%, -50%) rotate(90deg);
-    -o-transform: translate(-50%, -50%) rotate(90deg);
-    -moz-transform: translate(-50%, -50%) rotate(90deg);
     height: 100vw;
     width: 150px; }
   .profile__content-medal {
     margin: 0 auto;
-    width: 100px;
+    width: 110px;
     height: 90px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     transform: translateX(10px) rotate(-90deg);
-    position: relative;
-    width: 110px; }
+    position: relative; }
     .profile__content-medal span {
       text-transform: capitalize;
       font-size: 0.7rem;
@@ -779,9 +778,7 @@ section {
   text-align: left;
   padding: 2rem 1rem;
   font-size: 0.8rem;
-  position: relative;
-  max-height: 350px;
-  overflow-y: scroll; }
+  position: relative; }
   .profile__content-bio-key {
     color: #a0a0a0;
     text-transform: capitalize; }
@@ -794,6 +791,9 @@ section {
     position: absolute;
     top: 10px;
     right: 20px; }
+
+.profile__content-edit-bio:link {
+  color: #161616; }
 
 .profile__content-stat-container {
   margin: 1.2rem 0.5rem 0;
