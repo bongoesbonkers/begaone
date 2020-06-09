@@ -84,7 +84,7 @@ class Authenticator {
                     console.log('user signed out');
 
                     //redirect user back to index
-                    window.location.href = "begaone/index.html";
+                    window.location.href = "/index.html";
                 })
                 .catch(err => console.log(err))
             })
