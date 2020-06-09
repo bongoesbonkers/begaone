@@ -45,13 +45,15 @@ class Authenticator {
                     .then((response)=>{
                         // TEST
                         // console.log(response);
-
+                        // Toggle Login Message
+                        const loginMessage = document.querySelector('.login__message-container');
+                        loginMessage.classList.toggle('u-hidden');
                         // Check if user document exist using uid in response object
                         db.collection("users").doc(response.user.uid).get()
                         .then(document => {
                             if(document.exists) {
                                 const user = document.data();
-                                window.location.href = "home.html";
+                                window.location.href = "/home.html";
                             } else {
                                 //create new user document
                                 db.collection("users").doc(response.user.uid).set({
@@ -59,7 +61,7 @@ class Authenticator {
                                 })
                                 .then(()=>{
                                     //redirect to homepage after sign-in
-                                    window.location.href = "home.html";
+                                    window.location.href = "/home.html";
                                 })
                             }
                         })                        
@@ -81,7 +83,7 @@ class Authenticator {
                     console.log('user signed out');
 
                     //redirect user back to index
-                    window.location.href = "index.html";
+                    window.location.href = "/index.html";
                 })
                 .catch(err => console.log(err))
             })
@@ -92,11 +94,11 @@ class Authenticator {
         auth.onAuthStateChanged(user => {
             if(user){
                 // redirect user to home page if he is still logged in
-                if(window.location.pathname == "/begaone/") {
+                if(window.location.pathname == "/") {
                     const redirectToggler = document.querySelector('#redirectToggler');
                     redirectToggler.checked = true;
                     let timer = setTimeout(()=>{
-                        window.location.href = "home.html";
+                        window.location.href = "/home.html";
                     }, 1200)
                 }
                 console.log(`user is logged in`);
