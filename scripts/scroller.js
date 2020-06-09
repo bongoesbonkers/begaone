@@ -18,10 +18,13 @@ sectionsContainer.addEventListener('touchstart', e => {
 
 function handleSlide(container, startPoint, endPoint) {
     const distance = endPoint - startPoint;
-    const speed = (distance/100).floor();
+    const speed = Math.floor(distance/100);
     console.log(speed);
-
-    container.scrollBy(0, 100*speed);
+    if(speed > 0) {
+        container.scrollBy(0, 100*speed);
+    }  else {
+        container.scrollBy(0, 200);
+    }
 
     
     // if(startPoint > endPoint) {
