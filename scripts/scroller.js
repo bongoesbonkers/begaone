@@ -1,37 +1,43 @@
 //JS for website innate scroll functionalities 
 
 //scroll in JS
-const sectionsContainer = document.querySelector('.sections__container');
+const slideContents = document.querySelectorAll('.slider__contents');
 
-sectionsContainer.addEventListener('touchstart', e => {
-    const startX = e.touches[0].screenX;
-    const slideContents = document.querySelectorAll('.slider__contents');
-    slideContents.forEach(function (slideContent) {
-        sectionsContainer.addEventListener('touchmove', e => {
-            if (e.target.tagName === 'UL' || e.target.tagName === 'A') {
-                let finalX = e.touches[0].screenX;
-                handleSlide(slideContent, startX, finalX);
-            }
-        })
-    });
-})
-
-function handleSlide(content, startPoint, endPoint) {
-    const distance = endPoint - startPoint;
-    const rate = Math.floor(distance/100);
-    content.scrollBy(0, 175*rate);
-}
+// sectionsContainer.addEventListener('touchstart', e => {
+//     const startX = e.touches[0].screenX;
+//     slideContents.forEach(function (slideContent) {
+//         sectionsContainer.addEventListener('touchmove', e => {
+//             if (e.target.tagName === 'UL' || e.target.tagName === 'A') {
+//                 let finalX = e.touches[0].screenX;
+//                 handleSlide(slideContent, startX, finalX);
+//             }
+//         })
+//     });
+// })
 
 
-//scroll for home-page feature cards
-document.addEventListener('DOMContentLoaded', () => {
-    let sliderContents = document.querySelectorAll('.slider__contents');
-    if (sliderContents) {
-        sliderContents.forEach(content => {
-            let timer = setTimeout(() => {
-                content.scrollTop = content.scrollHeight;
-                clearTimeout(timer);
-            }, 1300);
+if (slideContents) {
+    slideContents.forEach(function (content) {
+            content.addEventListener('touchstart', e => {
+                const startX = e.touches[0].clientX;
+                content.addEventListener('touchmove', e => {
+                    let endX = e.touches[0].clientX;
+                    let distance = endX- startX;
+                    content.scrollBy(0, distance);
+                })
+            })
         });
     }
-});
+
+    //scroll for home-page feature cards
+    document.addEventListener('DOMContentLoaded', () => {
+        let sliderContents = document.querySelectorAll('.slider__contents');
+        if (sliderContents) {
+            sliderContents.forEach(content => {
+                let timer = setTimeout(() => {
+                    content.scrollTop = content.scrollHeight;
+                    clearTimeout(timer);
+                }, 1300);
+            });
+        }
+    });
