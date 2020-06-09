@@ -34,8 +34,7 @@ body {
 
 .section__info {
   text-align: left;
-  padding: 1rem 1.5rem;
-  margin-bottom: -3rem; }
+  padding: 1rem 1.5rem 2rem; }
 
 .section__small {
   display: block;
@@ -125,7 +124,8 @@ form input {
 
 nav {
   position: fixed;
-  height: 80px; }
+  height: 80px;
+  z-index: 10; }
 
 .nav__container {
   height: inherit;
@@ -162,7 +162,7 @@ nav {
   box-shadow: 0 0 10px rgba(22, 22, 22, 0.5);
   border-radius: 5px;
   cursor: pointer;
-  z-index: 1; }
+  z-index: 1000; }
   .nav__label:hover .nav__icon::before {
     -webkit-transform: translateY(-14px);
     -ms-transform: translateY(-14px);
@@ -552,7 +552,7 @@ nav {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: 0; }
+  scrollbar-width: auto; }
   .slider__contents::-webkit-scrollbar {
     display: none; }
 
@@ -601,14 +601,17 @@ nav {
   .landing input[type="checkbox"] {
     display: none; }
     .landing input[type="checkbox"]:checked ~ .redirect__container {
+      display: block;
       opacity: 1;
       position: absolute;
       top: 0;
       left: 0;
       background-color: rgba(25, 26, 90, 0.97);
       height: 100vh;
-      width: 100vw; }
+      width: 100vw;
+      z-index: 100; }
   .landing .redirect__container {
+    display: none;
     opacity: 0; }
     .landing .redirect__container h4 {
       position: absolute;
@@ -621,26 +624,40 @@ nav {
       transform: translate(-50%, -50%);
       text-align: center;
       text-transform: capitalize;
-      width: inherit; }
+      width: inherit;
+      z-index: -100; }
+  .landing .login__message-container {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(77, 114, 152, 0.97);
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: 1px 1px 3px rgba(22, 22, 22, 0.8);
+    text-transform: uppercase; }
 
 .sections__container:first-of-type {
   padding-top: 80px; }
 
 .sections__container .btn {
   display: inline-block;
-  margin: -2rem auto 2rem; }
+  margin: 2rem auto; }
 
 section {
   text-align: center; }
 
 .feature__cards-container {
-  height: 350px;
-  margin: 1rem 0;
-}
+  height: 300px; }
 
 .feature__cards {
   height: 100vw;
-  width: 400px; }
+  width: 300px; }
 
 .profile__container {
   padding-top: 80px;
