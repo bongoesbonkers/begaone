@@ -15,7 +15,6 @@ const slideContents = document.querySelectorAll('.slider__contents');
 //     });
 // })
 
-
 if (slideContents) {
     slideContents.forEach(function (content) {
             content.addEventListener('touchstart', e => {
@@ -23,7 +22,13 @@ if (slideContents) {
                 content.addEventListener('touchmove', e => {
                     let endX = e.touches[0].clientX;
                     let distance = endX- startX;
-                    content.scrollBy(0, distance);
+                    let rate = distance/100;
+                    console.log(rate);
+                    if( rate > 1) {
+                        content.scrollBy(0, distance*rate);
+                    } else {
+                        content.scrollBy(0, distance);
+                    }
                 })
             })
         });
