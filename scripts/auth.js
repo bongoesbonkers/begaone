@@ -50,13 +50,13 @@ class Authenticator {
                         loginMessage.classList.toggle('u-hidden');
                         // Check if user document exist using uid in response object
                         db.collection("users").doc(response.user.uid).get()
-                        .then(document => {
+                        .then(async document => {
                             if(document.exists) {
-                                const user = document.data();
+                                const user = await document.data();
                                 window.location.href = "../home.html";
                             } else {
                                 //create new user document
-                                db.collection("users").doc(response.user.uid).set({
+                                await db.collection("users").doc(response.user.uid).set({
                                     email: response.user.email
                                 })
                                 .then(()=>{
