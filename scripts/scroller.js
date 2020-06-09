@@ -16,24 +16,10 @@ sectionsContainer.addEventListener('touchstart', e => {
     });
 })
 
-function handleSlide(container, startPoint, endPoint) {
+function handleSlide(content, startPoint, endPoint) {
     const distance = endPoint - startPoint;
-    const speed = Math.floor(distance/100);
-    console.log(speed);
-    if(speed > 0) {
-        container.scrollBy(0, 100*speed);
-    }  else {
-        container.scrollBy(0, 200);
-    }
-
-    
-    // if(startPoint > endPoint) {
-    //     console.log('scroll to right');
-    //     container.scrollBy(0, -200);
-    // } else {
-    //     console.log('scroll to left');
-    //     container.scrollBy(0, 200);
-    // }
+    const rate = 2;
+    content.scrollBy(0, distance*rate);
 }
 
 
