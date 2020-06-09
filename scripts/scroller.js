@@ -18,8 +18,8 @@ sectionsContainer.addEventListener('touchstart', e => {
 
 function handleSlide(content, startPoint, endPoint) {
     const distance = endPoint - startPoint;
-    const rate = 2;
-    content.scrollBy(0, distance*rate);
+    const rate = Math.floor(distance/100);
+    content.scrollBy(0, 175*rate);
 }
 
 
