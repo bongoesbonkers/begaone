@@ -17,10 +17,10 @@ sectionsContainer.addEventListener('touchstart', e => {
 function handleSlide(container, startPoint, endPoint) {
     if(startPoint > endPoint) {
         console.log('scroll to right');
-        container.scrollBy(0, -150);
+        container.scrollBy(0, -200);
     } else {
         console.log('scroll to left');
-        container.scrollBy(0, 150);
+        container.scrollBy(0, 200);
     }
 }
 
