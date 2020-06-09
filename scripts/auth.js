@@ -95,7 +95,7 @@ class Authenticator {
         auth.onAuthStateChanged(user => {
             if(user){
                 // redirect user to home page if he is still logged in
-                if(window.location.pathname == "/") {
+                if(window.location.pathname == "/begaone/") {
                     const redirectToggler = document.querySelector('#redirectToggler');
                     redirectToggler.checked = true;
                     let timer = setTimeout(()=>{
