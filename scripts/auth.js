@@ -48,6 +48,7 @@ class Authenticator {
                         // TEST
                         // console.log(response);
                         // Toggle Login Message
+                        loginMessage.style.zIndex = "200";
                         loginMessage.classList.toggle('u-hidden');
                         // Set user persistence
                         const userPersist = loginForm.loginPersist.value;
@@ -77,6 +78,7 @@ class Authenticator {
                     //fail to sign in
                     .catch((err) => {
                         indexUI.setCaption('That username/password is incorrect. Please try again.');
+                        return;
                     });
             })
         }
@@ -102,9 +104,13 @@ class Authenticator {
         auth.onAuthStateChanged(user => {
             if(user){
                 // redirect user to home page if he is still logged in
-                if(window.location.pathname == "/begaone/") {
-                    const redirectToggler = document.querySelector('#redirectToggler');
-                    redirectToggler.checked = true;
+                if(
+                window.location.pathname == "/index.html" || 
+                window.location.pathname == "/begaone/index.html" ||
+                window.location.pathname == "/" ||
+                window.location.pathname == "/begaone/"
+                ) {
+                    authUI.persistenceMessage(user);
                     let timer = setTimeout(()=>{
                         window.location.href = "home.html";
                     }, 1200)
