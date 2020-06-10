@@ -11,7 +11,7 @@ class Authenticator {
 
     }
 
-    register() {
+    register(uiObj) {
         if (registerForm) {
             registerForm.addEventListener('submit', async e => {
                 e.preventDefault();
@@ -24,22 +24,22 @@ class Authenticator {
                         registerFormToggler.checked = false;
                         //RESET REGISTER FORM
                         registerForm.reset();
-                        //Sign user out
-                        auth.signOut();
-                        //Show message letting user know he is registered 
-                        //Prompt user to sign in
-                        indexUI.setCaption('Success! Please login with your e-mail and password.');
+                        // //Sign user out
+                        // // auth.signOut();
+                        // //Show message letting user know he is registered 
+                        // //Prompt user to sign in
+                        // uiObj.registerCaption('Success! Please login with your e-mail and password.');
                     })
                     .catch((err) => {
                         //TEST
-                        console.log(err);
-                        indexUI.setCaption(err);
+                        // console.log(err);
+                        uiObj.registerCaption(err);
                     });
             })
         }
     }
 
-    signInHandler() {
+    signInHandler(signInMethod) {
         if (loginForm) {
             loginForm.addEventListener('submit', e => {
                     e.preventDefault();
@@ -50,12 +50,14 @@ class Authenticator {
                             .then(() => {
                                 console.log('executing persistent login');
                                 this.signInWithEmailAndPassword();
+                                // return signInMethod();
                             })
                     } else {
                         auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
                             .then(() => {
                                 console.log('executing session login');
                                 this.signInWithEmailAndPassword();
+                                //return signInMethod();
                             })
                     }
             })
@@ -91,8 +93,9 @@ class Authenticator {
     }
     }
 
-    authChanges() {
+    authChanges(uiObj) {
     auth.onAuthStateChanged(user => {
+        console.log(user);
         if (user) {
             // redirect user to home page if he is still logged in
             if (
@@ -101,16 +104,14 @@ class Authenticator {
                 window.location.pathname == "/" ||
                 window.location.pathname == "/begaone/"
             ) {
-                authUI.persistenceMessage(user);
+                uiObj.persistenceMessage(user);
                 let timer = setTimeout(() => {
                     window.location.href = "home.html";
                 }, 1500)
             }
-            console.log(user);
-            console.log(`user is logged in`);
-            navUI.setCaption(user);
+            uiObj.navCaption(user);
         } else {
-            console.log(`no user is logged in`);
+            return;
         }
     })
     }
