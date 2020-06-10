@@ -25,7 +25,7 @@ class UI {
             else if(user.displayName != null) {
                 navCaption.innerHTML = `Hello <span class="nav__caption-username highlight--info">${user.displayName}</span>, what are you looking for today?`
             } else {
-                navCaption.innerHTML = `Welcome! It looks like you are new here. <a href='/user_profile.html'><span class="highlight--cta">Complete your profile</span></a> to start earning medals and rewards while using and contributing to the site! <a href="#"><span class="highlight--info">Learn more</span>`;
+                navCaption.innerHTML = `Welcome! It looks like you are new here. <a href='user_profile.html'><span class="highlight--cta">Complete your profile</span></a> to start earning medals and rewards while using and contributing to the site! <a href="#"><span class="highlight--info">Learn more</span>`;
             }
         }
     }
