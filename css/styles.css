@@ -578,12 +578,23 @@ nav {
     .landing .heading img {
       max-width: 100%;
       margin: 0.2rem 0 1rem; }
-  .landing .login__form[type="text"] {
+  .landing .login__form input[type="text"] {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px; }
-  .landing .login__form[type="password"] {
+  .landing .login__form input[type="password"] {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
+  .landing .login__form input[type="checkbox"] {
+    display: inline-block;
+    width: unset;
+    transform: translate(0, 3px); }
+  .landing .login__form label {
+    display: inline-block;
+    color: #191a5a;
+    margin-right: .5rem;
+    font-size: 0.8rem; }
+  .landing .login__form .login__persist-container {
+    margin: .3rem; }
   .landing h5 {
     font-weight: 400;
     text-transform: uppercase;
@@ -598,9 +609,9 @@ nav {
   .landing a:link,
   .landing a:visited {
     color: #ffeaec; }
-  .landing input[type="checkbox"] {
+  .landing #redirectToggler {
     display: none; }
-    .landing input[type="checkbox"]:checked ~ .redirect__container {
+    .landing #redirectToggler:checked ~ .redirect__container {
       display: block;
       opacity: 1;
       position: absolute;
@@ -608,8 +619,9 @@ nav {
       left: 0;
       background-color: rgba(25, 26, 90, 0.97);
       height: 100vh;
-      width: 100vw;
-      z-index: 100; }
+      width: 100vw; }
+      .landing #redirectToggler:checked ~ .redirect__container h4 {
+        z-index: 100; }
   .landing .redirect__container {
     display: none;
     opacity: 0; }
