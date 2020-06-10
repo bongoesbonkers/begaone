@@ -29,6 +29,10 @@
           <!-- <div class="login"> -->
           <input type="text" id="loginUsername" placeholder="Email Address" autocomplete="off" required>
           <input type="password" id="loginPassword" placeholder="Password" autocomplete="off" required>
+          <div class="login__persist-container">
+            <label for="loginPersist">Remember me  on this device</label>
+            <input type="checkbox" name="loginPersist" id="loginPersist">
+          </div>
           <button type="submit" class="btn btn__primary btn__large">Login</button>
           <!-- </div> -->
         </form>
@@ -58,7 +62,8 @@
     </div>
 
     <!-- Redirect window -->
-      <input type="checkbox" id="redirectToggler" autocomplete="off">
+    <input type="checkbox" id="redirectToggler" autocomplete="off">
+
       <div class="redirect__container">
         <h4>Already logged in. <br> redirecting you to the home page </h4>
       </div>
