@@ -5,7 +5,7 @@ class AuthUI {
         const h4 = document.querySelector('.redirect__container h4');
         let html;
         if(user) {
-            html = `Already logged in as ${user.email} <br> redirecting you to the home page.`
+            html = `Logging in as ${user.email} <br> redirecting you to the home page.`
         } else {
             return;
         }
