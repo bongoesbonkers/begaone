@@ -609,19 +609,6 @@ nav {
   .landing a:link,
   .landing a:visited {
     color: #ffeaec; }
-  .landing #redirectToggler {
-    display: none; }
-    .landing #redirectToggler:checked ~ .redirect__container {
-      display: block;
-      opacity: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(25, 26, 90, 0.97);
-      height: 100vh;
-      width: 100vw; }
-      .landing #redirectToggler:checked ~ .redirect__container h4 {
-        z-index: 100; }
   .landing .redirect__container {
     display: none;
     opacity: 0; }
@@ -638,6 +625,19 @@ nav {
       text-transform: capitalize;
       width: inherit;
       z-index: -100; }
+  .landing #redirectToggler {
+    display: none; }
+    .landing #redirectToggler:checked ~ .redirect__container {
+      display: block;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(25, 26, 90, 0.97);
+      height: 100vh;
+      width: 100vw; }
+      .landing #redirectToggler:checked ~ .redirect__container h4 {
+        z-index: 100; }
   .landing .login__message-container {
     width: 70%;
     position: absolute;
