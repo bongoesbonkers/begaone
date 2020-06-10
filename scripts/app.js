@@ -4,7 +4,7 @@ const app_auth = new Authenticator();
 let authUI = new AuthUI();
 
 app_auth.register();
-app_auth.signIn();
+app_auth.signInHandler();
 app_auth.authChanges();
 app_auth.signOut();
 
