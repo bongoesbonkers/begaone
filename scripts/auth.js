@@ -2,6 +2,8 @@ const registerForm = document.querySelector('.register__form');
 const loginForm = document.querySelector('.login__form');
 const registerFormToggler = document.querySelector('.register__toggler');
 const signOutBtn = document.querySelector('#signOut');
+const loginMessage = document.querySelector('.login__message-container');
+
 
 class Authenticator {
 
@@ -46,14 +48,20 @@ class Authenticator {
                         // TEST
                         // console.log(response);
                         // Toggle Login Message
-                        const loginMessage = document.querySelector('.login__message-container');
                         loginMessage.classList.toggle('u-hidden');
-                        // Check if user document exist using uid in response object
+                        // Set user persistence
+                        const userPersist = loginForm.loginPersist.value;
+                        if(userPersist) {
+                            auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+                        } else {
+                            auth.setPersistence(firebase.auth.Auth.Persistence.NONE);
+                        }
+                        // CHECK IF USER DOCUMENT EXISTS
                         db.collection("users").doc(response.user.uid).get()
                         .then(async document => {
                             if(document.exists) {
                                 const user = await document.data();
-                                window.location.pathname = "begaone/home.html";
+                                window.location.href = "begaone/home.html";
                             } else {
                                 //create new user document
                                 await db.collection("users").doc(response.user.uid).set({
@@ -61,14 +69,13 @@ class Authenticator {
                                 })
                                 .then(()=>{
                                     //redirect to homepage after sign-in
-                                    window.location.pathname = "begaone/home.html";
+                                    window.location.href = "begaone/home.html";
                                 })
                             }
                         })                        
                     })
                     //fail to sign in
                     .catch((err) => {
-                    loginMessage.innerHTML
                         indexUI.setCaption('That username/password is incorrect. Please try again.');
                     });
             })
@@ -84,7 +91,7 @@ class Authenticator {
                     console.log('user signed out');
 
                     //redirect user back to index
-                    window.location.pathname = "begaone/index.html";
+                    window.location.href = "begaone/index.html";
                 })
                 .catch(err => console.log(err))
             })
@@ -99,7 +106,7 @@ class Authenticator {
                     const redirectToggler = document.querySelector('#redirectToggler');
                     redirectToggler.checked = true;
                     let timer = setTimeout(()=>{
-                        window.location.pathname = "begaone/home.html";
+                        window.location.href = "begaone/home.html";
                     }, 1200)
                 }
                 console.log(`user is logged in`);
